@@ -4,10 +4,15 @@
 <script src="/LiquidGauge/liquidFillGauge.js" language="JavaScript"></script>
 <dom-module id="liquid-gauge">
   <template>
-    <svg id="mainsvg" class='mainsvg'></svg>
-    <style>
-          .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
-          .mainsvg{overflow:visible}
+    <svg id="mainsvgLG" class="mainsvgLG" style='overflow:visible!important'></svg>
+    <style scope="liquid-gauge">
+          .liquidFillGaugeText {
+            font-family: Helvetica;
+            font-weight: bold;
+          }
+          .mainsvgLG{
+            overflow:visible!important;
+          }
     </style>
   </template>
 
@@ -24,7 +29,7 @@
                     config[prop] = this.getAttribute(prop);
               }
             }
-            var gauge = loadLiquidFillGauge(d3.select(this.$.mainsvg),config);
+            var gauge = loadLiquidFillGauge(d3.select(this.$.mainsvgLG),config);
         }
         connectedCallback() {
             super.connectedCallback();

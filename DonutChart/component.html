@@ -6,14 +6,17 @@
 
 <dom-module id="donut-chart">
   <template>
-    <svg id="mainsvg" class='mainsvg'></svg>
-    <style>
+    <svg id="mainsvgDN" class='mainsvgDN'></svg>
+    <style scope="donut-chart">
     .arc text {
       font: 10px sans-serif;
       text-anchor: middle;
      }
      .arc path {
        stroke: #fff;
+     }
+     .mainsvgDN{
+       overflow: visible!important;
      }
     </style>
   </template>
@@ -23,7 +26,7 @@
     // Extend Polymer.Element base class
     class DonutChart extends Polymer.Element {
       static get is() { return 'donut-chart' }
-      
+
       drawChart(){
         var me = this;
         var config = donutChartDefaultSettings();
@@ -35,7 +38,7 @@
         }
         getData(config.dataSrc, function(error, data){
           if(error) throw error;
-          loadDonutChart(d3.select(me.$.mainsvg),config, data);
+          loadDonutChart(d3.select(me.$.mainsvgDN),config, data);
         })
 
       }
