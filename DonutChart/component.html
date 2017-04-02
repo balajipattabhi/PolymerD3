@@ -1,0 +1,45 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<script src="/DonutChart/donutChart.js"></script>
+<dom-module id="donut-chart">
+  <template>
+    <svg id="mainsvg" class='mainsvg'></svg>
+    <style>
+    .arc text {
+      font: 10px sans-serif;
+      text-anchor: middle;
+     }
+     .arc path {
+       stroke: #fff;
+     }
+    </style>
+  </template>
+
+  <script>
+
+    // Extend Polymer.Element base class
+    class DonutChart extends Polymer.Element {
+      static get is() { return 'donut-chart' }
+      drawChart(){
+        var config = donutChartDefaultSettings();
+        for(var prop in config){
+          if(this.getAttribute(prop)!=null)
+          {
+                config[prop] = this.getAttribute(prop);
+          }
+        }
+        loadDonutChart(d3.select(this.$.mainsvg),config);
+      }
+      connectedCallback() {
+            super.connectedCallback();
+            this.drawChart();
+      }
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(DonutChart.is, DonutChart);
+
+
+  </script>
+</dom-module>
