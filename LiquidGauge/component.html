@@ -1,0 +1,40 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<script src="/LiquidGauge/liquidFillGauge.js" language="JavaScript"></script>
+<dom-module id="liquid-gauge">
+  <template>
+    <svg id="mainsvg" class='mainsvg'></svg>
+    <style>
+          .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+          .mainsvg{overflow:visible}
+    </style>
+  </template>
+
+  <script>
+
+    // Extend Polymer.Element base class
+    class LiquidGauge extends Polymer.Element {
+      static get is() { return 'liquid-gauge' }
+      drawChart(){
+            var config = liquidFillGaugeDefaultSettings();
+            for(var prop in config){
+              if(this.getAttribute(prop)!=null)
+              {
+                    config[prop] = this.getAttribute(prop);
+              }
+            }
+            var gauge = loadLiquidFillGauge(d3.select(this.$.mainsvg),config);
+        }
+        connectedCallback() {
+            super.connectedCallback();
+            this.drawChart();
+        }
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(LiquidGauge.is, LiquidGauge);
+
+
+  </script>
+</dom-module>
