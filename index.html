@@ -6,11 +6,19 @@
   <link rel="import"  href='bower_components/common/includes.html'>
   <link rel="import"  href='DonutChart/component.html'>
   <link rel="import"  href='LiquidGauge/component.html'>
+  <link rel="import"  href='BarChart/component.html'>
   <title>Demo Page of widgets</title>
 </head>
 
 <body>
+<div>
 <donut-chart width=400 height=275 xaxis='age' yaxis='population' dataSrc='donutChart.json'></donut-chart>
-<liquid-gauge value=70 width=400 height=400></liquid-gauge>
+<liquid-gauge value=70 width=200 height=200></liquid-gauge>
+</div>
+
+<div>
+<bar-chart width=400 height=400 xaxis='city' yaxis='mortality' dataSrc='dataBarChart.tsv'></bar-chart>
+</div>
+
 </body>
 </html>

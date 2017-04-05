@@ -1,32 +1,38 @@
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="/DonutChart/donutChart.js"></script>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script src="/BarChart/barChart.js"></script>
 
-<dom-module id="donut-chart">
+
+<dom-module id="bar-chart">
   <template>
-    <svg id="mainsvgDN" class='mainsvgDN'></svg>
+    <svg id="mainsvgBC" class='mainsvgBC'></svg>
     <style>
-    .arc text {
-      font: 10px sans-serif;
-      text-anchor: middle;
-     }
-     .arc path {
-       stroke: #fff;
-     }
-     .mainsvgDN{
-       overflow: visible!important;
-     }
+    .mainsvgBC{
+        overflow:visible!important;
+    }
+
+    .bar {
+      fill: steelblue;
+    }
+
+    .bar:hover {
+      fill: brown;
+    }
+
+    .axis--x path {
+      display: none;
+    }
     </style>
   </template>
 
   <script>
 
     // Extend Polymer.Element base class
-    class DonutChart extends Polymer.Element {
-      static get is() { return 'donut-chart' }
+    class BarChart extends Polymer.Element {
+      static get is() { return 'bar-chart' }
 
       drawChart(){
         var me = this;
-        var config = donutChartDefaultSettings();
+        var config = barChartDefaultSettings();
         for(var prop in config){
           if(this.getAttribute(prop)!=null)
           {
@@ -35,7 +41,7 @@
         }
         getData(config.dataSrc, function(error, data){
           if(error) throw error;
-          loadDonutChart(d3.select(me.$.mainsvgDN),config, data);
+          loadBarChart(d3.select(me.$.mainsvgBC), config, data);
         })
 
       }
@@ -46,7 +52,7 @@
     }
 
     // Register custom element definition using standard platform API
-    customElements.define(DonutChart.is, DonutChart);
+    customElements.define(BarChart.is, BarChart);
 
 
   </script>
