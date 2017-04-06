@@ -1,0 +1,102 @@
+[
+  {
+    "dimension": "BetweennessCentrality",
+    "count": 3534
+  },
+  {
+    "dimension": "LinkDistance",
+    "count": 5731
+  },
+  {
+    "dimension": "MaxFlowMinCut",
+    "count": 7840
+  },
+  {
+    "dimension": "ShortestPaths",
+    "count": 5914
+  },
+  {
+    "dimension": "SpanningTree",
+    "count": 3416
+  },
+  {
+    "dimension": "optimization",
+    "count": ""
+  },
+  {
+    "dimension": "optimization.AspectRatioBanker",
+    "count": 7074
+  },
+  {
+    "dimension": "animate",
+    "count": 0
+  },
+  {
+    "dimension": "Easing",
+    "count": 17010
+  },
+  {
+    "dimension": "FunctionSequence",
+    "count": 5842
+  },
+  {
+    "dimension": "interpolate",
+    "count": ""
+  },
+  {
+    "dimension": "ArrayInterpolator",
+    "count": 1983
+  },
+  {
+    "dimension": "ColorInterpolator",
+    "count": 2047
+  },
+  {
+    "dimension": "DateInterpolator",
+    "count": 1375
+  },
+  {
+    "dimension": "Interpolator",
+    "count": 8746
+  },
+  {
+    "dimension": "MatrixInterpolator",
+    "count": 2202
+  },
+  {
+    "dimension": "NumberInterpolator",
+    "count": 1382
+  },
+  {
+    "dimension": "ObjectInterpolator",
+    "count": 1629
+  },
+  {
+    "dimension": "PointInterpolator",
+    "count": 1675
+  },
+  {
+    "dimension": "RectangleInterpolator",
+    "count": 2042
+  },
+  {
+    "dimension": "ISchedulable",
+    "count": 1041
+  },
+  {
+    "dimension": "Parallel",
+    "count": 5176
+  },
+  {
+    "dimension": "Pause",
+    "count": 449
+  },
+  {
+    "dimension": "Scheduler",
+    "count": 5593
+  },
+  {
+    "dimension": "Sequence",
+    "count": 5534
+  }
+]
