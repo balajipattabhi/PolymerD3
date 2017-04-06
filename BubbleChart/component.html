@@ -1,28 +1,21 @@
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="/DonutChart/donutChart.js"></script>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script src="/BubbleChart/bubbleChart.js"></script>
 
-<dom-module id="donut-chart">
+<dom-module id="bubble-chart">
   <template>
     <svg id="mainsvg" class='mainsvg'></svg>
     <style>
-    .arc text {
-      font: 10px sans-serif;
-      text-anchor: middle;
-     }
-     .arc path {
-       stroke: #fff;
-     }
-     .mainsvg{
-       overflow: visible!important;
-     }
+      .mainsvg{
+        overflow:visible;
+      }
     </style>
   </template>
 
   <script>
 
     // Extend Polymer.Element base class
-    class DonutChart extends Polymer.Element {
-      static get is() { return 'donut-chart' }
+    class BubbleChart extends Polymer.Element {
+      static get is() { return 'bubble-chart' }
        render(){
         var me = this;
         var config = getSettings();
@@ -45,7 +38,7 @@
     }
 
     // Register custom element definition using standard platform API
-    customElements.define(DonutChart.is, DonutChart);
+    customElements.define(BubbleChart.is, BubbleChart);
 
 
   </script>

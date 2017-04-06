@@ -7,18 +7,23 @@
   <link rel="import"  href='DonutChart/component.html'>
   <link rel="import"  href='LiquidGauge/component.html'>
   <link rel="import"  href='BarChart/component.html'>
+  <link rel="import"  href='BubbleChart/component.html'>
   <title>Demo Page of widgets</title>
 </head>
 
 <body>
-  
+
 <div>
 <donut-chart width=400 height=275 xaxis='age' yaxis='population' dataSrc='donutChart.json'></donut-chart>
 <liquid-gauge value=70 width=200 height=200></liquid-gauge>
+<bubble-chart dataSrc="dataBubble.csv" width="700" height="600" id="dimension" value="count"> </bubble-chart>
 </div>
 
 <div>
 <bar-chart width=400 height=400 xaxis='city' yaxis='mortality' dataSrc='dataBarChart.tsv'></bar-chart>
+</div>
+
+<div>
 </div>
 
 </body>
