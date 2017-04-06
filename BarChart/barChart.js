@@ -1,4 +1,4 @@
-function barChartDefaultSettings(){
+function getSettings(){
     return {
         width:960,
         height:500,
@@ -8,8 +8,8 @@ function barChartDefaultSettings(){
     };
 }
 
-function loadBarChart(mainsvg, config, data){
-
+function fillSVG(mainsvg, config, data){
+    if(config == null) config = getSettings();
     var svg = mainsvg,
       margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = + config.width - margin.left - margin.right,

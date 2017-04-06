@@ -4,20 +4,17 @@
 
 <dom-module id="bar-chart">
   <template>
-    <svg id="mainsvgBC" class='mainsvgBC'></svg>
+    <svg id="mainsvg" class='mainsvg'></svg>
     <style>
-    .mainsvgBC{
+    .mainsvg{
         overflow:visible!important;
     }
-
     .bar {
       fill: steelblue;
     }
-
     .bar:hover {
       fill: brown;
     }
-
     .axis--x path {
       display: none;
     }
@@ -27,12 +24,11 @@
   <script>
 
     // Extend Polymer.Element base class
-    class BarChart extends Polymer.Element {
+  class BarChart extends Polymer.Element {
       static get is() { return 'bar-chart' }
-
-      drawChart(){
+      render(){
         var me = this;
-        var config = barChartDefaultSettings();
+        var config = getSettings();
         for(var prop in config){
           if(this.getAttribute(prop)!=null)
           {
@@ -41,13 +37,13 @@
         }
         getData(config.dataSrc, function(error, data){
           if(error) throw error;
-          loadBarChart(d3.select(me.$.mainsvgBC), config, data);
+          fillSVG(d3.select(me.$.mainsvg), config, data);
         })
 
       }
       connectedCallback() {
             super.connectedCallback();
-            this.drawChart();
+            this.render();
       }
     }
 

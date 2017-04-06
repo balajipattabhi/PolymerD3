@@ -24,5 +24,5 @@ var getData = function(file, callback){
       break;
     }
   }
-  
+
 }

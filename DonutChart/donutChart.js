@@ -1,4 +1,4 @@
-function donutChartDefaultSettings(){
+function getSettings(){
     return {
         width:960,
         height:500,
@@ -9,8 +9,8 @@ function donutChartDefaultSettings(){
     };
 }
 
-function loadDonutChart(mainsvg, config, data){
-
+function fillSVG(mainsvg, config, data){
+ if(config == null) config = getSettings();
   var width = config.width,
       height = config.height,
       radius = Math.min(width, height) / 2;

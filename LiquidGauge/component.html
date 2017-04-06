@@ -3,13 +3,13 @@
 
 <dom-module id="liquid-gauge">
   <template>
-    <svg id="mainsvgLG" class="mainsvgLG"></svg>
+    <svg id="mainsvg" class="mainsvg"></svg>
     <style>
           .liquidFillGaugeText {
             font-family: Helvetica;
             font-weight: bold;
           }
-          .mainsvgLG{
+          .mainsvg{
             overflow:visible!important;
           }
     </style>
@@ -20,19 +20,20 @@
     // Extend Polymer.Element base class
     class LiquidGauge extends Polymer.Element {
       static get is() { return 'liquid-gauge' }
-      drawChart(){
-            var config = liquidFillGaugeDefaultSettings();
+      render(){
+            var config = getSettings();
             for(var prop in config){
               if(this.getAttribute(prop)!=null)
               {
                     config[prop] = this.getAttribute(prop);
               }
             }
-            var gauge = loadLiquidFillGauge(d3.select(this.$.mainsvgLG),config);
+            var data = config.value;
+            fillSVG(d3.select(this.$.mainsvg),config, data);
         }
         connectedCallback() {
             super.connectedCallback();
-            this.drawChart();
+            this.render();
         }
     }
 

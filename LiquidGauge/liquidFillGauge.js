@@ -5,7 +5,7 @@
  *
  * Liquid Fill Gauge v1.1
  */
-function liquidFillGaugeDefaultSettings(){
+function getSettings(){
     return {
         value:50,
         width:100,
@@ -33,11 +33,11 @@ function liquidFillGaugeDefaultSettings(){
     };
 }
 
-function loadLiquidFillGauge(gauge, config) {
-    if(config == null) config = liquidFillGaugeDefaultSettings();
+function fillSVG(gauge, config, data) {
+    if(config == null) config = getSettings();
 
     //var gauge = d3.select("#" + elementId);
-    var value = config.value;
+    var value = data;
     var width = config.width;
     var height = config.height;
     var radius = Math.min(width,height)/2;
