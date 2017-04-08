@@ -1,30 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-  <link rel="import"  href='bower_components/common/includes.html'>
-  <link rel="import"  href='DonutChart/component.html'>
-  <link rel="import"  href='LiquidGauge/component.html'>
-  <link rel="import"  href='BarChart/component.html'>
-  <link rel="import"  href='BubbleChart/component.html'>
-  <title>Demo Page of widgets</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Carousel</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="import"  href='bower_components/common/includes.html'>
+<link rel="import"  href='DonutChart/component.html'>
+<link rel="import"  href='LiquidGauge/component.html'>
+<link rel="import"  href='BarChart/component.html'>
+<link rel="import"  href='BubbleChart/component.html'>
+<style type="text/css">
+.carousel{
+    background: white;
+    height:100vh!important;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.showoverflow{
+  overflow:visible;
+}
+.widgetcontent{
+  /*text-align: center;*/
+  margin-left:5%;
+  height:100vh!important;
+}
+.text-black{
+  color:black;
+}
+.leftwidth{
+  width:5%;
+}
+.rightwidth{
+  width:5%;
+}
+
+</style>
 </head>
-
 <body>
-
 <div>
-<donut-chart width=400 height=275 xaxis='age' yaxis='population' dataSrc='donutChart.json'></donut-chart>
-<liquid-gauge value=70 width=200 height=200></liquid-gauge>
-<bubble-chart dataSrc="dataBubble.json" width="700" height="600" id="dimension" value="count"> </bubble-chart>
-</div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false" >
+        <!-- Carousel indicators -->
+        <!--<ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>-->
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner showoverflow"  >
+            <div class="item active widgetcontent ">
+                <donut-chart width=700 height=400 xaxis='age' yaxis='population' dataSrc='donutChart.json'></donut-chart>
+            </div>
 
-<div>
-<bar-chart width=400 height=400 xaxis='city' yaxis='mortality' dataSrc='dataBarChart.tsv'></bar-chart>
-</div>
+            <div class="item widgetcontent ">
+                <liquid-gauge value=30 width=700 height=400></liquid-gauge>
+            </div>
 
-<div>
-</div>
+            <div class="item widgetcontent ">
+                <bubble-chart dataSrc="dataBubble.json" width="700" height="400" id="dimension" value="count"> </bubble-chart>
+            </div>
 
+            <div class="item widgetcontent ">
+                <bar-chart width=700 height=400 xaxis='city' yaxis='mortality' dataSrc='dataBarChart.tsv'></bar-chart>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left leftwidth" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right rightwidth" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
 </body>
 </html>
