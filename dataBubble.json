@@ -1,102 +1,102 @@
 [
   {
-    "dimension": "BetweennessCentrality",
+    "dimension": "A",
     "count": 3534
   },
   {
-    "dimension": "LinkDistance",
+    "dimension": "B",
     "count": 5731
   },
   {
-    "dimension": "MaxFlowMinCut",
+    "dimension": "C",
     "count": 7840
   },
   {
-    "dimension": "ShortestPaths",
+    "dimension": "D",
     "count": 5914
   },
   {
-    "dimension": "SpanningTree",
+    "dimension": "E",
     "count": 3416
   },
   {
-    "dimension": "optimization",
+    "dimension": "F",
     "count": ""
   },
   {
-    "dimension": "optimization.AspectRatioBanker",
+    "dimension": "G",
     "count": 7074
   },
   {
-    "dimension": "animate",
+    "dimension": "H",
     "count": 0
   },
   {
-    "dimension": "Easing",
+    "dimension": "I",
     "count": 17010
   },
   {
-    "dimension": "FunctionSequence",
+    "dimension": "J",
     "count": 5842
   },
   {
-    "dimension": "interpolate",
+    "dimension": "K",
     "count": ""
   },
   {
-    "dimension": "ArrayInterpolator",
+    "dimension": "L",
     "count": 1983
   },
   {
-    "dimension": "ColorInterpolator",
+    "dimension": "M",
     "count": 2047
   },
   {
-    "dimension": "DateInterpolator",
+    "dimension": "N",
     "count": 1375
   },
   {
-    "dimension": "Interpolator",
+    "dimension": "O",
     "count": 8746
   },
   {
-    "dimension": "MatrixInterpolator",
+    "dimension": "P",
     "count": 2202
   },
   {
-    "dimension": "NumberInterpolator",
+    "dimension": "Q",
     "count": 1382
   },
   {
-    "dimension": "ObjectInterpolator",
+    "dimension": "R",
     "count": 1629
   },
   {
-    "dimension": "PointInterpolator",
+    "dimension": "S",
     "count": 1675
   },
   {
-    "dimension": "RectangleInterpolator",
+    "dimension": "T",
     "count": 2042
   },
   {
-    "dimension": "ISchedulable",
+    "dimension": "U",
     "count": 1041
   },
   {
-    "dimension": "Parallel",
+    "dimension": "V",
     "count": 5176
   },
   {
-    "dimension": "Pause",
+    "dimension": "W",
     "count": 449
   },
   {
-    "dimension": "Scheduler",
+    "dimension": "Y",
     "count": 5593
   },
   {
-    "dimension": "Sequence",
+    "dimension": "Z",
     "count": 5534
   }
 ]
