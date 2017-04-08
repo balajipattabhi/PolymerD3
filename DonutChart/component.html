@@ -1,21 +1,10 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="/DonutChart/donutChart.js"></script>
+<script src="/DonutChart/impl.js"></script>
 
 <dom-module id="donut-chart">
+  <link rel="import" type="css" href="/DonutChart/main.css">
   <template>
     <svg id="mainsvg" class='mainsvg'></svg>
-    <style>
-    .arc text {
-      font: 10px sans-serif;
-      text-anchor: middle;
-     }
-     .arc path {
-       stroke: #fff;
-     }
-     .mainsvg{
-       overflow: visible!important;
-     }
-    </style>
   </template>
 
   <script>

@@ -1,24 +1,11 @@
 <script src="http://d3js.org/d3.v4.min.js"></script>
-<script src="/BarChart/barChart.js"></script>
+<script src="/BarChart/impl.js"></script>
 
 
 <dom-module id="bar-chart">
+  <link rel="import" type="css" href="/BarChart/main.css">
   <template>
     <svg id="mainsvg" class='mainsvg'></svg>
-    <style>
-    .mainsvg{
-        overflow:visible!important;
-    }
-    .bar {
-      fill: steelblue;
-    }
-    .bar:hover {
-      fill: brown;
-    }
-    .axis--x path {
-      display: none;
-    }
-    </style>
   </template>
 
   <script>

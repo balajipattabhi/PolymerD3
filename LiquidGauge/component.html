@@ -1,18 +1,10 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="/LiquidGauge/liquidFillGauge.js" language="JavaScript"></script>
+<script src="/LiquidGauge/impl.js" language="JavaScript"></script>
 
 <dom-module id="liquid-gauge">
+  <link rel="import" type="css" href="/LiquidGauge/main.css">
   <template>
     <svg id="mainsvg" class="mainsvg"></svg>
-    <style>
-          .liquidFillGaugeText {
-            font-family: Helvetica;
-            font-weight: bold;
-          }
-          .mainsvg{
-            overflow:visible!important;
-          }
-    </style>
   </template>
 
   <script>
