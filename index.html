@@ -7,6 +7,7 @@
 <title>Example of Bootstrap 3 Carousel</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet"  href='main.css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="import"  href='bower_components/common/includes.html'>
@@ -14,44 +15,10 @@
 <link rel="import"  href='LiquidGauge/component.html'>
 <link rel="import"  href='BarChart/component.html'>
 <link rel="import"  href='BubbleChart/component.html'>
-<style type="text/css">
-.carousel{
-    background: white;
-    height:100vh!important;
-}
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-}
-.showoverflow{
-  overflow:visible;
-}
-.widgetcontent{
-  /*text-align: center;*/
-  margin-left:5%;
-  height:100vh!important;
-}
-.text-black{
-  color:black;
-}
-.leftwidth{
-  width:5%;
-}
-.rightwidth{
-  width:5%;
-}
-
-</style>
 </head>
 <body>
 <div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false" >
-        <!-- Carousel indicators -->
-        <!--<ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>-->
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner showoverflow"  >
             <div class="item active widgetcontent ">

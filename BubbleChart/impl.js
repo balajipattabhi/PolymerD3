@@ -44,7 +44,7 @@ function fillSVG(mainsvg, config, data){
     node.append("circle")
         .attr("id", function(d) { return d.id; })
         .attr("r", function(d) { return d.r; })
-        .style("fill", function(d) { return color(d.package); });
+        .style("fill", function(d) {return color(10); });
 
     node.append("clipPath")
         .attr("id", function(d) { return "clip-" + d.id; })

@@ -1,0 +1,23 @@
+.carousel{
+  background: white;
+  height:100vh!important;
+}
+.carousel .item img{
+  margin: 0 auto; /* Align slide image horizontally center */
+}
+.showoverflow{
+  overflow:visible;
+}
+.widgetcontent{
+  margin-left:5%;
+  height:100vh!important;
+}
+.text-black{
+  color:black;
+}
+.leftwidth{
+  width:5%;
+}
+.rightwidth{
+  width:5%;
+}
