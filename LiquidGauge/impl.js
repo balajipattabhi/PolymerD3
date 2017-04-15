@@ -185,7 +185,7 @@ function fillSVG(gauge, config, data) {
             .transition()
             .duration(config.waveRiseTime)
             .attr('transform','translate('+waveGroupXPosition+','+waveRiseScale(fillPercent)+')')
-            .each("start", function(){ wave.attr('transform','translate(1,0)'); }); // This transform is necessary to get the clip wave positioned correctly when waveRise=true and waveAnimate=false. The wave will not position correctly without this, but it's not clear why this is actually necessary.
+            .on("start", function(){ wave.attr('transform','translate(1,0)'); }); // This transform is necessary to get the clip wave positioned correctly when waveRise=true and waveAnimate=false. The wave will not position correctly without this, but it's not clear why this is actually necessary.
     } else {
         waveGroup.attr('transform','translate('+waveGroupXPosition+','+waveRiseScale(fillPercent)+')');
     }
@@ -196,10 +196,10 @@ function fillSVG(gauge, config, data) {
         wave.attr('transform','translate('+waveAnimateScale(wave.attr('T'))+',0)');
         wave.transition()
             .duration(config.waveAnimateTime * (1-wave.attr('T')))
-            .ease('linear')
+            //.ease('linear')
             .attr('transform','translate('+waveAnimateScale(1)+',0)')
             .attr('T', 1)
-            .each('end', function(){
+            .on('end', function(){
                 wave.attr('T', 0);
                 animateWave(config.waveAnimateTime);
             });

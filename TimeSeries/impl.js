@@ -9,7 +9,7 @@ function getSettings(){
     return {
         width:960,
         height:500,
-        dataSrc:'data.tsv',
+        dataSrc:'dataTimeSeries.csv',
         processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis',
@@ -26,8 +26,16 @@ function fillSVG(mainsvg, config, data){
         g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var parseTime;
-    if(config.xTimeParse!='')
+    var x;
+    if(config.xTimeParse!=''){
       parseTime = d3.timeParse(config.xTimeParse);
+      x = d3.scaleTime()
+      .rangeRound([0, width]);
+    }
+    else{
+         x = d3.scaleLinear()
+        .rangeRound([0, width]);
+    }
 
     var x = d3.scaleTime()
       .rangeRound([0, width]);

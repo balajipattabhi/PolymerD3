@@ -7,7 +7,7 @@ function getSettings(){
     return {
         width:960,
         height:500,
-        dataSrc:'donutChart.json',
+        dataSrc:'dataDonutChar.csv',
         processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis',

@@ -7,7 +7,7 @@ function getSettings(){
     return {
         width:960,
         height:500,
-        dataSrc:'dataBarChart.tsv',
+        dataSrc:'dataBarChart.csv',
         processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis'

@@ -10,7 +10,7 @@ function getSettings(){
         processFn:processFn,
         id:'id',
         value:'value',
-        dataSrc:'dataBubble.json',
+        dataSrc:'dataBubble.csv',
     };
 }
 
