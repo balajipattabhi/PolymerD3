@@ -1,5 +1,4 @@
 var getData = function(file, processFn, callback){
-
   var extn = file.split(".");
   switch(extn[1])
   {

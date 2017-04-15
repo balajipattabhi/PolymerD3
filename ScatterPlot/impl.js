@@ -8,6 +8,9 @@ function getSettings(){
         width:960,
         height:500,
         processFn:processFn,
+        xaxis:'xaxis',
+        yaxis:'yaxis',
+        series:'series',
         dataSrc:'dataScatter.csv'
     };
 }
@@ -37,14 +40,14 @@ function fillSVG(mainsvg, config, data){
     var yAxis = d3.axisLeft()
         .scale(y);
 
-  
+
 
     var svg = mainsvg
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+        
     data.forEach(function(d) {
       d[config.yaxis] = +d[config.yaxis];
       d[config.xaxis] = +d[config.xaxis];
