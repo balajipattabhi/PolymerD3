@@ -12,6 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="import"  href='bower_components/common/includes.html'>
 <link rel="import"  href='DonutChart/component.html'>
+<link rel="import"  href='PieChart/component.html'>
 <link rel="import"  href='LiquidGauge/component.html'>
 <link rel="import"  href='BarChart/component.html'>
 <link rel="import"  href='BubbleChart/component.html'>
@@ -49,6 +50,9 @@
             </div>
             <div class="item widgetcontent ">
                 <stacked-area width=700 height=400 xaxis='date'  dataSrc='dataStackedArea.csv'></stacked-area >
+            </div>
+            <div class="item widgetcontent ">
+                <pie-chart width=700 height=400 xaxis='age' yaxis='population' dataSrc='dataPieChart.csv'></pie-chart>
             </div>
 
 
