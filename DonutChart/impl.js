@@ -1,8 +1,14 @@
 function getSettings(){
+
+    var processFn = function(d) {
+      return d;
+    };
+
     return {
         width:960,
         height:500,
-        dataSrc:'data.csv',
+        dataSrc:'donutChart.json',
+        processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis',
         colors:["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]
@@ -15,14 +21,14 @@ function fillSVG(mainsvg, config, data){
       height = config.height,
       radius = Math.min(width, height) / 2;
 
-  var color = d3.scale.ordinal()
+  var color = d3.scaleOrdinal()
       .range(config.colors);
 
-  var arc = d3.svg.arc()
+  var arc = d3.arc()
       .outerRadius(radius - 10)
       .innerRadius(radius - 70);
 
-  var pie = d3.layout.pie()
+  var pie = d3.pie()
       .sort(null)
       .value(function(d) { return d[config.yaxis]; });
 

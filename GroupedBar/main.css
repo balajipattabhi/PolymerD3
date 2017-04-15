@@ -1,0 +1,7 @@
+.mainsvg{
+    overflow:visible!important;
+}
+
+.axis .domain {
+  display: none;
+}

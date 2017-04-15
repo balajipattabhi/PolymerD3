@@ -1,8 +1,16 @@
+
+
 function getSettings(){
+
+    var processFn = function(d) {
+      return d;
+    }
+
     return {
         width:960,
         height:500,
         dataSrc:'data.tsv',
+        processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis',
         xTimeParse:'%d-%b-%y'

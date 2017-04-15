@@ -1,0 +1,21 @@
+.mainsvg{
+  overflow:visible;
+  font-family:'sans-serif';
+  font-size:12px;
+  text-anchor:middle;
+}
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}

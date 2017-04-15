@@ -1,8 +1,14 @@
+
 function getSettings(){
+
+    var processFn = function(d) {
+      return d;
+    };
     return {
         width:960,
         height:500,
-        dataSrc:'data.tsv',
+        dataSrc:'dataBarChart.tsv',
+        processFn:processFn,
         xaxis:'xaxis',
         yaxis:'yaxis'
     };

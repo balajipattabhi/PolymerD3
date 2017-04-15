@@ -1,17 +1,16 @@
-<script src="http://d3js.org/d3.v4.min.js"></script>
-<script src="/DonutChart/impl.js"></script>
+<script src="/ScatterPlot/impl.js"></script>
 
-<dom-module id="donut-chart">
-  <link rel="import" type="css" href="/DonutChart/main.css">
+
+<dom-module id="scatter-plot">
+  <link rel="import" type="css" href="/ScatterPlot/main.css">
   <template>
     <svg id="mainsvg" class='mainsvg'></svg>
   </template>
-
   <script>
 
     // Extend Polymer.Element base class
-    class DonutChart extends Polymer.Element {
-      static get is() { return 'donut-chart' }
+    class ScatterPlot extends Polymer.Element {
+      static get is() { return 'scatter-plot' }
        render(){
         var me = this;
         var config = getSettings();
@@ -34,7 +33,7 @@
     }
 
     // Register custom element definition using standard platform API
-    customElements.define(DonutChart.is, DonutChart);
+    customElements.define(ScatterPlot.is, ScatterPlot);
 
 
   </script>

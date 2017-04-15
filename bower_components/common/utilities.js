@@ -1,10 +1,10 @@
-var getData = function(file, callback){
+var getData = function(file, processFn, callback){
 
   var extn = file.split(".");
   switch(extn[1])
   {
   case 'csv': {
-      d3.csv(file, function(error, data){
+      d3.csv(file, processFn, function(error, data){
           callback(error, data)
       });
       break;
@@ -18,7 +18,7 @@ var getData = function(file, callback){
     }
 
   case 'tsv': {
-      d3.tsv(file, function(error, data){
+      d3.tsv(file, processFn, function(error, data){
           callback(error, data)
       });
       break;

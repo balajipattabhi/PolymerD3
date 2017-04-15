@@ -1,8 +1,9 @@
 <script src="http://d3js.org/d3.v4.min.js"></script>
-<script src="/DonutChart/impl.js"></script>
+<script src="/GroupedBar/impl.js"></script>
 
-<dom-module id="donut-chart">
-  <link rel="import" type="css" href="/DonutChart/main.css">
+
+<dom-module id="grouped-bar">
+  <link rel="import" type="css" href="/GroupedBar/main.css">
   <template>
     <svg id="mainsvg" class='mainsvg'></svg>
   </template>
@@ -10,9 +11,9 @@
   <script>
 
     // Extend Polymer.Element base class
-    class DonutChart extends Polymer.Element {
-      static get is() { return 'donut-chart' }
-       render(){
+  class GroupedBar extends Polymer.Element {
+      static get is() { return 'grouped-bar' }
+      render(){
         var me = this;
         var config = getSettings();
         for(var prop in config){
@@ -23,7 +24,7 @@
         }
         getData(config.dataSrc, config.processFn, function(error, data){
           if(error) throw error;
-          fillSVG(d3.select(me.$.mainsvg),config, data);
+          fillSVG(d3.select(me.$.mainsvg), config, data);
         })
 
       }
@@ -34,7 +35,7 @@
     }
 
     // Register custom element definition using standard platform API
-    customElements.define(DonutChart.is, DonutChart);
+    customElements.define(GroupedBar.is, GroupedBar);
 
 
   </script>

@@ -1,10 +1,16 @@
 function getSettings(){
+
+    var processFn = function(d) {
+      return d;
+    };
+
     return {
         width:960,
         height:500,
+        processFn:processFn,
         id:'id',
         value:'value',
-        dataSrc:'data.csv',
+        dataSrc:'dataBubble.json',
     };
 }
 
