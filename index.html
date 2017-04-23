@@ -23,14 +23,21 @@
 
 </head>
 <body>
+
 <div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false" >
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner showoverflow">
+          <div class='topsection'>
+          <h1 class='pagetitle'>Polymer D3 Widgets</h1>
+          <a class="github-button" href="https://github.com/balajipattabhi/PolymerD3/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download balajipattabhi/PolymerD3 on GitHub">Download</a>
+          <a class="github-button" href="https://github.com/balajipattabhi/PolymerD3/fork" data-icon="octicon-repo-forked" data-style="mega"
+           aria-label="Fork balajipattabhi/PolymerD3 on GitHub">Fork</a>
+         </div>
+
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Donut Chart</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Donut Chart</h2>
                 </div>
                 <donut-chart width=700 height=400 xaxis='age' yaxis='population' dataSrc='dataDonutChart.csv'></donut-chart>
                 <xmp>
@@ -44,8 +51,8 @@
 
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Liquid Gauge</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Liquid Gauge</h2>
+
                 </div>
                 <liquid-gauge value=30 width=700 height=400></liquid-gauge>
                 <xmp>
@@ -58,8 +65,8 @@
             </div>
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Bubble Chart</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Bubble Chart</h2>
+
                 </div>
                 <bubble-chart dataSrc="dataBubble.csv" width="700" height="400" id="dimension" value="count"> </bubble-chart>
                 <xmp>
@@ -72,8 +79,8 @@
             </div>
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Bar Chart</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Bar Chart</h2>
+
                 </div>
                 <bar-chart width=700 height=400 xaxis='city' yaxis='mortality' dataSrc='dataBarChart.csv'></bar-chart>
                 <xmp>
@@ -86,8 +93,8 @@
             </div>
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Time Series</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Time Series</h2>
+
                 </div>
                 <time-series width=700 height=400 xaxis='date' yaxis='close' dataSrc='dataTimeSeries.csv'></time-series>
                 <xmp>
@@ -100,8 +107,8 @@
             </div>
             <div class="item widgetcontent active">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Grouped Bar</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Grouped Bar</h2>
+
                 </div>
                 <grouped-bar width=700 height=400 xaxis='Location' yaxis='Population' dataSrc='dataGroupedBar.csv'></grouped-bar>
                 <xmp>
@@ -114,8 +121,8 @@
             </div>
             <div class="item widgetcontent">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Scatter Plot</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Scatter Plot</h2>
+
                 </div>
                 <scatter-plot width=700 height=400 xaxis='sepalWidth' yaxis='sepalLength' series='species' dataSrc='dataScatter.csv'></scatter-plot>
                 <xmp>
@@ -128,8 +135,8 @@
             </div>
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Stacked Area</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Stacked Area</h2>
+
                 </div>
                 <stacked-area width=700 height=400 xaxis='date'  dataSrc='dataStackedArea.csv'></stacked-area >
                 <xmp>
@@ -142,8 +149,8 @@
             </div>
             <div class="item widgetcontent ">
                 <div class="widgettitle">
-                  <h1 class="widgetmaintitle">Pie Chart</h1>
-                  <h8 class="widgetsubtitle">Polymer D3 Widgets</h8>
+                  <h2 class="widgetmaintitle">Pie Chart</h2>
+
                 </div>
                 <pie-chart width=700 height=400 xaxis='age' yaxis='population' dataSrc='dataPieChart.csv'></pie-chart>
                 <xmp>
@@ -166,5 +173,7 @@
         </a>
     </div>
 </div>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

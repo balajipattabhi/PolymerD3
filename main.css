@@ -30,8 +30,20 @@
   margin-bottom:6px;
 }
 .widgetsubtitle{
+
+}
+.topsection{
+  margin-left:5em;
+}
+
+.pagetitle{
+  margin-top:0px
 }
 
 xmp{
-text-align:left;  
+text-align:left;
+}
+
+body{
+  font-family: monospace;
 }
