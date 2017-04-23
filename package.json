@@ -1,0 +1,20 @@
+{
+  "name": "polymerd3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balajipattabhi/PolymerD3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balajipattabhi/PolymerD3/issues"
+  },
+  "homepage": "https://github.com/balajipattabhi/PolymerD3#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
