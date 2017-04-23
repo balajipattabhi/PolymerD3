@@ -33,11 +33,23 @@
 
 }
 .topsection{
-  margin-left:5em;
+  padding-left:5em;
+  color:white;
+  background-color: #2196F3;
 }
 
 .pagetitle{
   margin-top:0px
+}
+
+.carousel-control{
+    color:black;
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right
+{
+  top:40%!important
 }
 
 xmp{
