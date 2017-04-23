@@ -1,0 +1,41 @@
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="impl.js"></script>
+
+<dom-module id="bar-chart">
+  <link rel="import" type="css" href="main.css">
+  <template>
+    <svg id="mainsvg" class='mainsvg'></svg>
+  </template>
+
+  <script>
+
+    // Extend Polymer.Element base class
+  class BarChart extends Polymer.Element {
+      static get is() { return 'bar-chart' }
+      render(){
+        var me = this;
+        var config = getSettings();
+        for(var prop in config){
+          if(this.getAttribute(prop)!=null)
+          {
+                config[prop] = this.getAttribute(prop);
+          }
+        }
+        getData(config.dataSrc, config.processFn, function(error, data){
+          if(error) throw error;
+          fillSVG(d3.select(me.$.mainsvg), config, data);
+        })
+
+      }
+      connectedCallback() {
+            super.connectedCallback();
+            this.render();
+      }
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(BarChart.is, BarChart);
+
+
+  </script>
+</dom-module>
