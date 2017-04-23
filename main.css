@@ -21,3 +21,17 @@
 .rightwidth{
   width:5%;
 }
+.widgettitle{
+  margin-top:0px;
+  margin-bottom:1em;
+}
+.widgetmaintitle{
+  margin-top:0px;
+  margin-bottom:6px;
+}
+.widgetsubtitle{
+}
+
+xmp{
+text-align:left;  
+}

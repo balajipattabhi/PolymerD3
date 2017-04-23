@@ -84,13 +84,13 @@ function fillSVG(mainsvg, config, data){
           .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
       legend.append("rect")
-          .attr("x", width - 19)
+          .attr("x", width+100)
           .attr("width", 19)
           .attr("height", 19)
           .attr("fill", z);
 
       legend.append("text")
-          .attr("x", width - 24)
+          .attr("x", width+90)
           .attr("y", 9.5)
           .attr("dy", "0.32em")
           .text(function(d) { return d; });

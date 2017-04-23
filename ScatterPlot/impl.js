@@ -47,7 +47,7 @@ function fillSVG(mainsvg, config, data){
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
+
     data.forEach(function(d) {
       d[config.yaxis] = +d[config.yaxis];
       d[config.xaxis] = +d[config.xaxis];
@@ -94,13 +94,13 @@ function fillSVG(mainsvg, config, data){
         .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
     legend.append("rect")
-        .attr("x", width - 18)
+        .attr("x", width+50)
         .attr("width", 18)
         .attr("height", 18)
         .style("fill", color);
 
     legend.append("text")
-        .attr("x", width - 24)
+        .attr("x", width+40)
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
