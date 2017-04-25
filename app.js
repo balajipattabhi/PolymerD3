@@ -9,6 +9,7 @@ app.get('/', function (req, res) {
 
 app.use(express.static(path.join(__dirname, '/')));
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+
+var server = app.listen(process.env.VCAP_APP_PORT || 5000, function () {
+	console.log ('Server started on port: ' + server.address().port);
+});

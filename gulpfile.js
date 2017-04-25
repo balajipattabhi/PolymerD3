@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var vulcanize = require('gulp-vulcanize');
+var minify = require('gulp-minify');
 
 gulp.task('vulcanize', function() {
   return gulp.src(['BarChart/*.html', 'BubbleChart/*.html', 'DonutChart/*.html','GroupedBar/*.html',
@@ -9,7 +10,7 @@ gulp.task('vulcanize', function() {
     inlineScripts: true,
     inlineCss: true
   }))
-    .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['vulcanize']);
