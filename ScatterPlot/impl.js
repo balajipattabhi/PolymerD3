@@ -15,7 +15,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGScatter(mainsvg, config, data){
 
     if(config == null) config = getSettings();
 

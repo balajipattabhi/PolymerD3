@@ -14,7 +14,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGBubble(mainsvg, config, data){
 
     if(config == null) config = getSettings();
 

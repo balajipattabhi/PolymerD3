@@ -16,7 +16,7 @@
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGScatter(mainsvg, config, data){
 
     if(config == null) config = getSettings();
 
@@ -156,7 +156,7 @@ body {
         }
         getData(config.dataSrc, config.processFn, function(error, data){
           if(error) throw error;
-          fillSVG(d3.select(me.$.mainsvg),config, data);
+          fillSVGScatter(d3.select(me.$.mainsvg),config, data);
         })
 
       }

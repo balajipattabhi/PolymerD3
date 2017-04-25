@@ -34,7 +34,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(gauge, config, data) {
+function fillSVGLiquidG(gauge, config, data) {
     if(config == null) config = getSettings();
 
     //var gauge = d3.select("#" + elementId);
@@ -306,7 +306,7 @@ function fillSVG(gauge, config, data) {
               }
             }
             var data = config.value;
-            fillSVG(d3.select(this.$.mainsvg),config, data);
+            fillSVGLiquidG(d3.select(this.$.mainsvg),config, data);
         }
         connectedCallback() {
             super.connectedCallback();

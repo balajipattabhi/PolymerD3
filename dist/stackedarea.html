@@ -19,13 +19,13 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGSArea(mainsvg, config, data){
     if(config == null) config = getSettings();
     var svg = mainsvg,
         margin = {top: 20, right: 20, bottom: 30, left: 50},
         width = +config.width - margin.left - margin.right,
         height = +config.height  - margin.top - margin.bottom;
-       
+
     var parseTime;
     var x;
     if(config.xTimeParse!=''){
@@ -38,7 +38,7 @@ function fillSVG(mainsvg, config, data){
         .rangeRound([0, width]);
     }
 
-    
+
 
     var y = d3.scaleLinear()
       .rangeRound([height, 0]);
@@ -48,11 +48,11 @@ function fillSVG(mainsvg, config, data){
     var stack = d3.stack();
 
     var area = d3.area()
-    .x(function(d, i) { 
+    .x(function(d, i) {
         if(config.xTimeParse!='')
              return x(parseTime(d.data[config.xaxis]));
         else
-             return x(d.data[config.xaxis]); 
+             return x(d.data[config.xaxis]);
     })
     .y0(function(d) { return y(d[0]); })
     .y1(function(d) { return y(d[1]); });
@@ -66,12 +66,12 @@ function fillSVG(mainsvg, config, data){
 
     var keys = data.columns.slice(1);
 
-    x.domain(d3.extent(data, function(d) { 
+    x.domain(d3.extent(data, function(d) {
         if(config.xTimeParse!='')
              return parseTime(d[config.xaxis]);
         else
              return d[config.xaxis];
-        
+
     }));
 
     z.domain(keys);
@@ -105,8 +105,6 @@ function fillSVG(mainsvg, config, data){
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y).ticks(10, "%"));
     }
-
-
 </script>
 
 
@@ -148,7 +146,7 @@ function fillSVG(mainsvg, config, data){
         }
         getData(config.dataSrc, config.processFn, function(error, data){
           if(error) throw error;
-          fillSVG(d3.select(me.$.mainsvg), config, data);
+          fillSVGSArea(d3.select(me.$.mainsvg), config, data);
         })
 
       }

@@ -15,7 +15,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGBar(mainsvg, config, data){
     if(config == null) config = getSettings();
     var svg = mainsvg,
       margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -96,7 +96,7 @@ function fillSVG(mainsvg, config, data){
         }
         getData(config.dataSrc, config.processFn, function(error, data){
           if(error) throw error;
-          fillSVG(d3.select(me.$.mainsvg), config, data);
+          fillSVGBar(d3.select(me.$.mainsvg), config, data);
         })
 
       }

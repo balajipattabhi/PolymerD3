@@ -15,7 +15,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGDonut(mainsvg, config, data){
  if(config == null) config = getSettings();
   var width = config.width,
       height = config.height,

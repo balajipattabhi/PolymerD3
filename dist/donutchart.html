@@ -16,7 +16,7 @@
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGDonut(mainsvg, config, data){
  if(config == null) config = getSettings();
   var width = config.width,
       height = config.height,
@@ -93,7 +93,7 @@ function fillSVG(mainsvg, config, data){
         }
         getData(config.dataSrc, config.processFn, function(error, data){
           if(error) throw error;
-          fillSVG(d3.select(me.$.mainsvg),config, data);
+          fillSVGDonut(d3.select(me.$.mainsvg),config, data);
         })
 
       }

@@ -14,7 +14,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(mainsvg, config, data){
+function fillSVGBar(mainsvg, config, data){
     if(config == null) config = getSettings();
     var svg = mainsvg,
       margin = {top: 20, right: 20, bottom: 30, left: 40},

@@ -33,7 +33,7 @@ function getSettings(){
     };
 }
 
-function fillSVG(gauge, config, data) {
+function fillSVGLiquidG(gauge, config, data) {
     if(config == null) config = getSettings();
 
     //var gauge = d3.select("#" + elementId);
