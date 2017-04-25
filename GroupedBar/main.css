@@ -1,7 +1,10 @@
 .mainsvg{
     overflow:visible!important;
+    min-width:700px;
+    min-height:400px;
 }
 
 .axis .domain {
   display: none;
+
 }

@@ -1,0 +1,9 @@
+---
+applications:
+- name: polymerD3
+  memory: 512M
+  buildpack: nodejs_buildpack
+  #command:  DEBUG=express:* node app.js
+  command:  node app.js
+env:
+    node_env: cloud

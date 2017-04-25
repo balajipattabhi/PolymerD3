@@ -1,4 +1,5 @@
-
+<html><head><meta charset="UTF-8"><script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
 
 function getSettings(){
 
@@ -17,6 +18,7 @@ function getSettings(){
         xTimeParse:'%Y %b %d'
     };
 }
+
 
 function fillSVGSArea(mainsvg, config, data){
     if(config == null) config = getSettings();
@@ -104,3 +106,61 @@ function fillSVGSArea(mainsvg, config, data){
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y).ticks(10, "%"));
     }
+</script>
+
+
+</head><body><dom-module id="stacked-area">
+
+  <template><style>
+.mainsvg{
+    overflow:visible!important;
+    min-width:700px;
+    min-height:400px;
+}
+.bar {
+  fill: steelblue;
+}
+.bar:hover {
+  fill: brown;
+}
+.axis--x path {
+  display: none;
+}
+
+</style>
+    <svg id="mainsvg" class="mainsvg"></svg>
+  </template>
+
+  <script>
+
+    // Extend Polymer.Element base class
+  class StackedAreaChart extends Polymer.Element {
+      static get is() { return 'stacked-area' }
+      render(){
+        var me = this;
+        var config = getSettings();
+        for(var prop in config){
+          if(this.getAttribute(prop)!=null)
+          {
+                config[prop] = this.getAttribute(prop);
+          }
+        }
+        getData(config.dataSrc, config.processFn, function(error, data){
+          if(error) throw error;
+          fillSVGSArea(d3.select(me.$.mainsvg), config, data);
+        })
+
+      }
+      connectedCallback() {
+            super.connectedCallback();
+            this.render();
+      }
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(StackedAreaChart.is, StackedAreaChart);
+
+
+  </script>
+</dom-module>
+</body></html>

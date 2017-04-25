@@ -1,0 +1,37 @@
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="impl.js" language="JavaScript"></script>
+
+<dom-module id="liquid-gauge">
+  <link rel="import" type="css" href="main.css">
+  <template>
+    <svg id="mainsvg" class="mainsvg"></svg>
+  </template>
+
+  <script>
+
+    // Extend Polymer.Element base class
+    class LiquidGauge extends Polymer.Element {
+      static get is() { return 'liquid-gauge' }
+      render(){
+            var config = getSettings();
+            for(var prop in config){
+              if(this.getAttribute(prop)!=null)
+              {
+                    config[prop] = this.getAttribute(prop);
+              }
+            }
+            var data = config.value;
+            fillSVGLiquidG(d3.select(this.$.mainsvg),config, data);
+        }
+        connectedCallback() {
+            super.connectedCallback();
+            this.render();
+        }
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(LiquidGauge.is, LiquidGauge);
+
+
+  </script>
+</dom-module>

@@ -3,4 +3,6 @@
   font-family:'sans-serif';
   font-size:12px;
   text-anchor:middle;
+  min-width:700px;
+  min-height:400px;
 }

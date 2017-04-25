@@ -9,7 +9,7 @@
   overflow:visible;
 }
 .widgetcontent{
-  margin-left:5%;
+  text-align: center;
   height:100vh!important;
 }
 .text-black{
@@ -20,4 +20,42 @@
 }
 .rightwidth{
   width:5%;
+}
+.widgettitle{
+  margin-top:0px;
+  margin-bottom:1em;
+}
+.widgetmaintitle{
+  margin-top:0px;
+  margin-bottom:6px;
+}
+.widgetsubtitle{
+
+}
+.topsection{
+  padding-left:5em;
+  color:white;
+  background-color: #2196F3;
+}
+
+.pagetitle{
+  margin-top:0px
+}
+
+.carousel-control{
+    color:black;
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right
+{
+  top:40%!important
+}
+
+xmp{
+text-align:left;
+}
+
+body{
+  font-family: monospace;
 }
